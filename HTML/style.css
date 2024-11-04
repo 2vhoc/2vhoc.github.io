@@ -1,0 +1,14 @@
+.hop {
+    background-color: #cecccc;
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    /* Thêm hiệu ứng chuyển tiếp cho bóng đổ */
+}
+
+.hop:hover {
+    box-shadow: 0 0 20px rgba(206, 206, 206, 0.8);
+    /* Hiệu ứng sáng khi hover */
+}
