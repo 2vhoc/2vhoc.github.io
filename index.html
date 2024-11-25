@@ -20,7 +20,7 @@
             color: #333;
             background: #f0f2f5;
         }
-        /* Header với gradient động */
+        
         
         .header {
             background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
@@ -429,13 +429,13 @@
 
 
     <script>
-        // Tạo hiệu ứng particles
+      
         function createParticle() {
             const particles = document.getElementById('particles');
             const particle = document.createElement('div');
             particle.className = 'particle';
 
-            // Random position
+          
             particle.style.left = Math.random() * 100 + '%';
             particle.style.top = Math.random() * 100 + '%';
 
@@ -447,10 +447,10 @@
             }, 3000);
         }
 
-        // Tạo particles định kỳ
+       
         setInterval(createParticle, 200);
 
-        // Animation cho sections khi scroll
+      
         const sections = document.querySelectorAll('.section');
         const options = {
             root: null,
@@ -473,12 +473,12 @@
     </script>
     <script>
         document.getElementById("myinfo").onclick = function() {
-            window.location.href = "./story/story1.html"; // Đường link bạn muốn đến
+            window.location.href = "./story/story1.html";
         };
     </script>
     <script>
         document.getElementById("machineLearning").onclick = function() {
-            window.location.href = "./story/story2.html"; // Đường link bạn muốn đến
+            window.location.href = "./story/story2.html";
         };
     </script>
 
