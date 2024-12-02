@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/vh.png" type="image/x-icon">
+    <title>Becoming AI Engineer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(120deg, #d4fc79, #96e6a1);
+            animation: gradientBg 15s infinite linear;
+            overflow-y: auto;
+            min-height: 100vh;
+        }
+        
+        @keyframes gradientBg {
+            0% {
+                background: linear-gradient(120deg, #d4fc79, #96e6a1);
+            }
+            25% {
+                background: linear-gradient(120deg, #a1c4fd, #c2e9fb);
+            }
+            50% {
+                background: linear-gradient(120deg, #fbc2eb, #a6c1ee);
+            }
+            75% {
+                background: linear-gradient(120deg, #84fab0, #8fd3f4);
+            }
+            100% {
+                background: linear-gradient(120deg, #d4fc79, #96e6a1);
+            }
+        }
+        
+        .container {
+            position: relative;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 20px;
+            width: 90%;
+            max-width: 800px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            animation: fadeIn 1.5s ease-in-out;
+            margin: 20px auto;
+        }
+        
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        h1 {
+            font-size: 2rem;
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        p {
+            font-size: 1rem;
+            color: #555555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        ul li {
+            color: #444;
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 15px;
+        }
+        
+        .home-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        
+        .home-btn:hover {
+            background-color: #0056b3;
+        }
+        
+        .bubbles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        
+        .bubble {
+            position: absolute;
+            bottom: -100px;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            opacity: 0.6;
+            animation: rise 10s infinite ease-in-out, drift 5s infinite ease-in-out;
+        }
+        
+        @keyframes rise {
+            0% {
+                transform: translateY(0) scale(0.8);
+                opacity: 0.6;
+            }
+            50% {
+                opacity: 0.9;
+            }
+            100% {
+                transform: translateY(-110vh) scale(1);
+                opacity: 0;
+            }
+        }
+        
+        @keyframes drift {
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(30px);
+            }
+        }
+        
+        .bubble:nth-child(1) {
+            left: 10%;
+            animation-duration: 12s;
+        }
+        
+        .bubble:nth-child(2) {
+            left: 25%;
+            animation-duration: 15s;
+            animation-delay: 3s;
+            width: 50px;
+            height: 50px;
+        }
+        
+        .bubble:nth-child(3) {
+            left: 40%;
+            animation-duration: 18s;
+            animation-delay: 6s;
+            width: 30px;
+            height: 30px;
+        }
+        
+        .bubble:nth-child(4) {
+            left: 60%;
+            animation-duration: 10s;
+            animation-delay: 2s;
+            width: 20px;
+            height: 20px;
+        }
+        
+        .bubble:nth-child(5) {
+            left: 75%;
+            animation-duration: 20s;
+            animation-delay: 4s;
+            width: 60px;
+            height: 60px;
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                margin: 10px auto;
+                width: 85%;
+                padding: 15px;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+            .home-btn {
+                display: block;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bubbles">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+    <div class="container">
+        <h1>Con đường đi tới AI Engineer P1</h1>
+        <h2 style="text-align: center;">FastAPI</h2>
+        <ul>
+            <li>
+                <p>
+                    Chào các bạn nhé:)), hôm nay là cũng sắp đến ngày thi kết thúc học phần của mình, nhưng mình lười học wuaa, nên mình chuyển sang học chuyên ngành, và mình đang học FastAPI, 1 framework hình như là về Backend:)), mình thấy học cái này dễ hiểu hơn Django
+                    chẳng biết tại sao nữa mình học Django cảm giác bị phụ thuộc vào những thứ có sẵn trong Django rất nhiều, kiểu như là mình phải nhớ syntax của framework đấy mới chạy được ấy thành ra là trong lúc học gặp lỗi rất nhiều mà không biết
+                    fix, mình lướt tiktok và gặp 1 anh nói về FastAPI, lúc đầu mình nghĩ cái này là liên quan đến API kiểu như là 1 thứ không biết nói kiểu gì ấy:)), nhưng sau khi xem clip đấy thì mình mới biết nó là 1 framework Backend giống như là Django,
+                    Flask, lúc đầu mình tham, mình tìm hiểu là Django dành cho các mô hình, project lớn, Flask thì project nhỏ hơn, mình lúc đấy bụp ngay vào Django và đến giờ mới hiểu được chút chút à nhưng không biết nó chạy như nào=))), hiện tại thì
+                    mình đang học FastAPI và mình tạo sẵn repo trên github về project mà mình sẽ làm với FastAPI mình để link đây:
+                    <a href="https://github.com/2vhoc/fastapi-project.git">Đây này, nhấn vào đây</a>
+                </p>
+            </li>
+        </ul>
+        <a href="../index.html" class="home-btn">Home</a>
+    </div>
+</body>
+
+</html>
