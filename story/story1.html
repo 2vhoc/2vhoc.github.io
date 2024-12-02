@@ -11,13 +11,10 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             background: linear-gradient(120deg, #d4fc79, #96e6a1);
-            overflow: hidden;
             animation: gradientBg 15s infinite linear;
+            overflow-y: auto;
+            min-height: 100vh;
         }
         
         @keyframes gradientBg {
@@ -43,11 +40,12 @@
             background: rgba(255, 255, 255, 0.9);
             border-radius: 15px;
             padding: 20px;
-            width: 60%;
+            width: 90%;
             max-width: 800px;
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
             z-index: 1;
             animation: fadeIn 1.5s ease-in-out;
+            margin: 20px auto;
         }
         
         @keyframes fadeIn {
@@ -62,7 +60,7 @@
         }
         
         h1 {
-            font-size: 2.5rem;
+            font-size: 2rem;
             color: #007bff;
             text-align: center;
             margin-bottom: 20px;
@@ -73,34 +71,26 @@
             color: #555555;
             line-height: 1.6;
             margin-bottom: 20px;
+            text-align: justify;
         }
         
         ul {
             list-style-type: none;
             padding: 0;
+            margin: 0;
         }
         
         ul li {
-            font-size: 1rem;
             color: #444;
             margin-bottom: 10px;
             position: relative;
-            padding-left: 25px;
-        }
-        
-        ul li::before {
-            position: absolute;
-            left: 0;
-            top: 0;
-            color: #007bff;
-            font-size: 1.0rem;
+            padding-left: 15px;
         }
         
         .home-btn {
             display: inline-block;
             margin-top: 20px;
             padding: 10px 20px;
-            font-size: 1rem;
             color: #fff;
             background-color: #007bff;
             border: none;
@@ -112,16 +102,16 @@
         .home-btn:hover {
             background-color: #0056b3;
         }
-        /* Bong bóng */
         
         .bubbles {
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             z-index: 0;
             overflow: hidden;
+            pointer-events: none;
         }
         
         .bubble {
@@ -158,12 +148,10 @@
                 transform: translateX(30px);
             }
         }
-        /* Tạo nhiều bong bóng */
         
         .bubble:nth-child(1) {
             left: 10%;
             animation-duration: 12s;
-            animation-delay: 0s;
         }
         
         .bubble:nth-child(2) {
@@ -197,6 +185,21 @@
             width: 60px;
             height: 60px;
         }
+        
+        @media (max-width: 480px) {
+            .container {
+                margin: 10px auto;
+                width: 85%;
+                padding: 15px;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+            .home-btn {
+                display: block;
+                text-align: center;
+            }
+        }
     </style>
 </head>
 
@@ -212,10 +215,11 @@
         <h1>Xin chào, tôi là Học</h1>
         <ul>
             <li>
-                <p>Tôi sinh năm 2005.<br> Tôi đến từ Tuyên Quang, mảnh đất nhiều gái đẹp nhất Việt Nam=))).<br> Hiện tại tôi đang học ngành Khoa học máy tính khóa D23 của Học viện Công nghệ Bưu chính Viễn thông, tôi bắt đầu với ngôn ngữ lập trình C của trường
-                    dạy, sau đó đến C++ và ngôn ngữ tôi yêu thích đó là Python, Python là 1 ngôn ngữ lập trình gần giống với ngôn ngữ tự nhiên của con người, tôi yêu thích nó bởi vì nó có các Framework rất hay và thú vị, hiện tại tôi đang định hướng bản
-                    thân theo chuyên ngành Trí Tuệ Nhân Tạo Thị Giác Máy Tính (Trong tương lai có thể là Fullstack AI), tôi đã định theo chuyên ngành AI của UET-VNU nhưng tôi thiếu 0.24đ:))))), nhưng không sao, PTIT đã đứng đó và cứu vớt tôi:)))). Bản
-                    thân của tôi không hề giỏi Toán, nhưng tôi giỏi Tán:))), năm tôi thi đại học là năm 2023 và môn tôi điểm thấp nhất là môn toán 8.x điểm=))))).
+                <p>
+                    Tôi sinh năm 2005.<br> Tôi đến từ Tuyên Quang, mảnh đất nhiều gái đẹp nhất Việt Nam=))).<br> Hiện tại tôi đang học ngành Khoa học máy tính khóa D23 của Học viện Công nghệ Bưu chính Viễn thông, tôi bắt đầu với ngôn ngữ lập trình C của
+                    trường dạy, sau đó đến C++ và ngôn ngữ tôi yêu thích đó là Python, Python là 1 ngôn ngữ lập trình gần giống với ngôn ngữ tự nhiên của con người, tôi yêu thích nó bởi vì nó có các Framework rất hay và thú vị, hiện tại tôi đang định
+                    hướng bản thân theo chuyên ngành Trí Tuệ Nhân Tạo Thị Giác Máy Tính (Trong tương lai có thể là Fullstack AI), tôi đã định theo chuyên ngành AI của UET-VNU nhưng tôi thiếu 0.24đ:))))), nhưng không sao, PTIT đã đứng đó và cứu vớt tôi:)))).
+                    Bản thân của tôi không hề giỏi Toán, nhưng tôi giỏi Tán:))), năm tôi thi đại học là năm 2023 và môn tôi điểm thấp nhất là môn toán 8.x điểm=))))).
                 </p>
             </li>
         </ul>
